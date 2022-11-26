@@ -45,8 +45,8 @@ function Canvas() {
       FPS = 60, // Frames per second
       dots = dotCount, // Number of stars
       mouse = {
-        x: window.innerHeight / 2,
-        y: window.innerWidth / 2
+        x: (30 * canvas.width) / 100,
+        y: (30 * canvas.height) / 100
       };  // mouse location
   
     // Push stars to array
@@ -136,7 +136,7 @@ function Canvas() {
       mouse.y = e.pageY;
     }
   
-    canvas.addEventListener('mousemove', moveFunc);
+    window.addEventListener('mousemove', moveFunc);
 
     let req;
     // Animate loop, update / draw
@@ -149,6 +149,8 @@ function Canvas() {
     
     tick();
 
+
+
     // Prevents preformance issues
     const cancelFrame = () => {
       cancelAnimationFrame(req);
@@ -159,7 +161,7 @@ function Canvas() {
 
     // Remove existing event listener on component redraw
     return _ => {
-      canvas.removeEventListener('mousemove', moveFunc)
+      window.removeEventListener('mousemove', moveFunc)
     }
   
   });
