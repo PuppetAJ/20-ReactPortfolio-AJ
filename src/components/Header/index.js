@@ -5,7 +5,7 @@ import { ReactComponent as MySVG } from '../../assets/images/down.svg'
 
 function Header() {
   return (
-      <main>
+      <>
         <Canvas/>
         <div className='header-style'>
           <div className='header-wrapper'>
@@ -20,7 +20,7 @@ function Header() {
           </div>
           </div>
         </div>
-      </main>
+      </>
   )
 };
 

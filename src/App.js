@@ -7,8 +7,8 @@ import About from './components/About';
 function App() {
   return (
     <ChakraProvider>
-      <Navigation/>
       <Header/>
+      <Navigation/>
       <About/>
     </ChakraProvider>
   )

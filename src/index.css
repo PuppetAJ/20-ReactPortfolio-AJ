@@ -1,6 +1,7 @@
 :root {
   --primary-bg: #171923;
   --secondary-bg: #1e202a;
+  --tertiary-bg: #13141b;
   --primary-text: #9E90F4;
   --secondary-text: #A0AEC0;
 }
@@ -33,8 +34,6 @@ code {
   background-color: var(--primary-bg);
   padding: 200px 0px;
   z-index: -2;
-  /* width: 100vw;
-  height: 100vh; */
   height: 100vh;
   width: 100%;
 }
@@ -97,10 +96,11 @@ code {
   animation: slideInFromBottom 1s 0s forwards;
   animation-delay: 1s;
   visibility: hidden;
+  cursor: pointer;
 }
 
 .button-wrapper svg {
-  margin-left: 15px
+  margin-left: 15px;
 }
 
 #canvas {
@@ -113,9 +113,49 @@ code {
   overflow: hidden;
 }
 
-.testClass {
-  height: 6000px;
+.about-wrapper {
+  background-color: var(--tertiary-bg);
+  padding-top: 1px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
+
+.avatar-wrapper {
+  margin-top: 20px;
+  background-image: url('./assets/images/testing.PNG');
+  background-repeat: no-repeat;
+  background-position-x: 70%;
+  background-size: cover;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 8px solid #0b0d14;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--tertiary-bg);
+  padding: 100px;
+}
+
+.about-text {
+  margin: 30px;
+  width: 550px;
+}
+
+#about-header {
+  text-decoration: underline;
+}
+p {
+  color: white;
+  font-size: 50px;
+}
+
 @keyframes slideInFromRight {
   0% {
     transform: translateX(-25%);
