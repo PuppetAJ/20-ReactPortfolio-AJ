@@ -1,3 +1,10 @@
+:root {
+  --primary-bg: #171923;
+  --secondary-bg: #1e202a;
+  --primary-text: #9E90F4;
+  --secondary-text: #A0AEC0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,6 +14,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body, html, #root {
+  height: 100%;
+  width: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -14,11 +26,30 @@ code {
 
 .header-style {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-bg);
+  padding: 200px 0px;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+.header-wrapper {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  background-color: #171923;
-  padding: 200px 0px;
+}
+
+#header-top {
+  animation: slideInFromRight 1s 0s forwards;
+  filter: drop-shadow(0 0 0.5rem #000000);
+}
+
+#header-bottom {
+  animation: slideInFromLeft 1s 0s forwards;
+  filter: drop-shadow(0 0 0.5rem #000000);
 }
 
 .name-format {
@@ -26,7 +57,7 @@ code {
 }
 
 .nav-wrapper {
-  background-color: #1e202a;
+  background-color: var(--secondary-bg);
   height: 100px;
   display: flex;
   justify-content: center;
@@ -40,7 +71,69 @@ code {
 .nav-links a {
   margin: 0px 20px;
   font-size: 28px;
+  font-weight: bold;
   text-decoration: none;
-  color: #A0AEC0;
-  border-bottom: 3px solid #A0AEC0;
+  color: var(--secondary-text);
+  border-bottom: 3px solid var(--secondary-text);
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  border: 3px solid var(--primary-text);
+  padding: 5px 25px;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--primary-text);
+  animation: slideInFromBottom 1s 0s forwards;
+  animation-delay: 1s;
+  visibility: hidden;
+}
+
+.button-wrapper svg {
+  margin-left: 15px
+}
+
+#canvas {
+  display: block;
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(-25%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(+25%);
+    opacity: 0%;  
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(+100%);
+    opacity: 0%;
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+    visibility: visible;
+  }
 }
