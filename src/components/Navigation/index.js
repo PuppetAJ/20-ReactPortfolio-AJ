@@ -1,21 +1,23 @@
-import { Text } from '@chakra-ui/react'
 import React from 'react';
 
-function Navigation() {
+function Navigation(props) {
+
+  const {navSelect} = props;
+
   return (
     <div className='nav-wrapper'>
       <ul className = 'nav-links'>
         <li>
-          <a href="#About-Me">About Me</a>
+          <a name='about' onClick = {navSelect} className='active' href="#About-Me">About Me</a>
         </li>
         <li>
-          <a href="#Work">Work</a>
+          <a name='work' onClick = {navSelect} href="#Work">Work</a>
         </li>
         <li>
-          <a href="#Contact">Contact Me</a>
+          <a name='contact' onClick = {navSelect} href="#Contact">Contact Me</a>
         </li>
         <li>
-          <a href="#" title="Coming Soon!">Resume</a>
+          <a name='resume' onClick = {navSelect} href="#" title="Coming Soon!">Resume</a>
         </li>
       </ul>
     </div>
