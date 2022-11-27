@@ -131,9 +131,10 @@ function Canvas() {
       }
     }
 
+    const rect = canvas.getBoundingClientRect();
     const moveFunc = (e) => {
-      mouse.x = e.pageX;
-      mouse.y = e.pageY;
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
     }
   
     window.addEventListener('mousemove', moveFunc);

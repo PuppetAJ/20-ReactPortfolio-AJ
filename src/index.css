@@ -109,7 +109,7 @@ code {
 
 #canvas {
   z-index: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -140,16 +140,21 @@ code {
   filter: drop-shadow(0 0 1.25rem rgb(64,60,96, 0.8));
 }
 
-.about {
+.content-format {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: var(--tertiary-bg);
   padding: 50px;
+  z-index: 15;
 }
 
-.about-text {
-  margin: 20px;
+.content-text {
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  margin-left: 20px;
   color: #A0AEC0;
   opacity: 75%;
   width: 550px;
@@ -163,7 +168,7 @@ p {
 .techs-container {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
@@ -203,9 +208,9 @@ p {
   filter: grayscale(100%);
 }
 
-.tech-wrapper:nth-last-child(1):nth-child(odd) {
+/* .tech-wrapper:nth-last-child(1):nth-child(odd) {
   grid-column: 2 / span 2;
-}
+} */
 
 .icon-format {
   width: 64px;
@@ -219,6 +224,8 @@ p {
 }
 
 .footer {
+  position: relative;
+  z-index: 15;
   padding: 50px;
   background-color: var(--secondary-bg);
   display: flex;
@@ -248,6 +255,83 @@ p {
   color: #a78cf3;
   transition: all 0.2s;
   border-bottom: 3px solid #a78cf3;
+}
+
+.project-format {
+  max-width: 600px;
+  margin: 20px;
+  display: block;
+  border: 0.125em solid rgb(229, 231, 235, 0.25);
+  border-radius: 1%;
+}
+
+.project-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-img-format {
+  object-fit: cover;
+  z-index: 0;
+  width: 600px;
+  height: 250px;
+}
+
+.transition-opacity {
+  opacity: 15%;
+  transition: all 0.3s;
+}
+
+.project-text {
+  padding: 1.5rem;
+}
+
+.project-text h3 {
+  color: var(--primary-text);
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+}
+
+.project-text h2 {
+  margin-top: 1px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.project-text p {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: var(--secondary-text);
+}
+
+.project-button {
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+  margin: 10px;
+  border: 0.2rem solid var(--primary-text);
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: var(--primary-text);
+}
+
+.project-button:hover {
+  color: white;
+  transition: all 0.3s;
+  background-color: var(--primary-text);
+}
+
+.project-button-wrapper {
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
 }
 
 @keyframes slideInFromRight {

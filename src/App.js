@@ -27,7 +27,8 @@ function App() {
   return (
     <ChakraProvider>
       <Header/>
-      <Navigation/>
+      <Navigation
+      navSelect = {selectedHandler} />
       {selected === 'about' 
       ? <About/> 
       : selected === 'work' 
