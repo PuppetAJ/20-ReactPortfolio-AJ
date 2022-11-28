@@ -5,6 +5,8 @@ import Navigation from './components/Navigation';
 import About from './components/About';
 import Footer from './components/Footer';
 import Work from './components/Work';
+import ContactForm from './components/Contact';
+import Resume from './components/Resume';
 
 function App() {
 
@@ -33,7 +35,11 @@ function App() {
       ? <About/> 
       : selected === 'work' 
       ? <Work/> 
-      : <About/>}
+      : selected === 'contact'
+      ? <ContactForm/>
+      : selected === 'resume' 
+      ? <Resume/> :
+      <About/> }
       <Footer/>
     </ChakraProvider>
   )
@@ -42,8 +48,15 @@ function App() {
 // To do: 
 // Increase landing page font sizes
 // make elements load on scroll
-// make navbar select correct item when in view
-// Home nav?
 // other components / pages
 // create new favicon
+// Contact form and resume section
+// Make app responsive 
+// https://www.youtube.com/watch?v=EAH8-V455p0
+// Make about section two parts side by side when in large view
+// Increase font sizes?
+// Make about me header button work
+// Make footer links work
+// Dropshadow on footer / nav
+
 export default App;

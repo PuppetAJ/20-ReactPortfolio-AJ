@@ -37,8 +37,8 @@ function Project(props) {
     <article className='project-format'>
       <div onMouseLeave={mouseLeave} onMouseEnter={mouseEnter} className='project-image'>
         <div className='project-button-wrapper'>
-          <a href={githubLink} className='project-button'><GitHubSVG/>GitHub</a>
-          <a href={deployedLink} className='project-button'><EyeSVG/>View Preview</a>
+          <a target='_blank' href={githubLink} className='project-button'><GitHubSVG/>GitHub</a>
+          <a target='_blank' href={deployedLink} className='project-button'><EyeSVG/>View Preview</a>
         </div>
         <img alt={alt} className='project-img-format' src={require(`../../assets/images/${imgName}.png`)}></img>
       </div>

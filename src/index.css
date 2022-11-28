@@ -85,7 +85,6 @@ code {
   font-weight: bold;
   text-decoration: none;
   color: var(--secondary-text);
-  border-bottom: 3px solid var(--secondary-text);
 }
 
 .button-wrapper {
@@ -253,14 +252,14 @@ p {
 
 .nav-links a:hover {
   color: #a78cf3;
-  transition: all 0.2s;
+  transition: color 0.2s;
   border-bottom: 3px solid #a78cf3;
 }
 
 .project-format {
+  grid-column: span 2;
   max-width: 600px;
   margin: 20px;
-  display: block;
   border: 0.125em solid rgb(229, 231, 235, 0.25);
   border-radius: 1%;
 }
@@ -332,6 +331,38 @@ p {
   align-items: center;
   justify-content: center;
   opacity: 0;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-form {
+  border: 0.125em solid rgb(229, 231, 235, 0.25);
+  border-radius: 1%;
+  padding: 40px;
+  width: 900px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  color: var(--secondary-text);
+}
+
+.form-input {
+  margin: 8px;
+  width: auto;
+}
+
+.form-button {
+  justify-content: center;
+  width: 25%;
+  margin-bottom: 0px;
 }
 
 @keyframes slideInFromRight {

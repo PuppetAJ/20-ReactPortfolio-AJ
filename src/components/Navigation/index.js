@@ -17,7 +17,7 @@ function Navigation(props) {
           <a name='contact' onClick = {navSelect} href="#Contact">Contact Me</a>
         </li>
         <li>
-          <a name='resume' onClick = {navSelect} href="#" title="Coming Soon!">Resume</a>
+          <a name='resume' onClick = {navSelect} href="#Resume" title="Coming Soon!">Resume</a>
         </li>
       </ul>
     </div>
