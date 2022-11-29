@@ -40,7 +40,7 @@ Once all dependencies have been downloaded, you can start the react development 
 
 ![](./assets/images/preview.png)
 
-In order to use this project, please make sure you have node.js intalled on your machine. Once that is set up, simply execute npm start and the application should start. Alternatively, visit the site [here](https://frozen-journey-17981.herokuapp.com/)
+In order to use this project, please make sure you have node.js intalled on your machine. Once that is set up, simply execute npm start and the application should start. Alternatively, visit the site [here](https://puppetaj.github.io/20-ReactPortfolio-AJ/)
 
 ## Credits
 
