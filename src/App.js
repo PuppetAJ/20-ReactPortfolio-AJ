@@ -1,3 +1,4 @@
+// Imports
 import * as React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import Header from './components/Header';
@@ -8,12 +9,15 @@ import Work from './components/Work';
 import ContactForm from './components/Contact';
 import Resume from './components/Resume';
 
+// App component initialization
 function App() {
 
+  // Selected nav state tracker
   const [selected, setSelected] = React.useState('about');
 
+  // Detects which nav el was detected and sets the correct one to active
   const selectedHandler = (e) => {
-    if(e.target.className != 'active') {
+    if(e.target.className !== 'active') {
       const children = document.querySelector('.nav-links').children;
       for (const el of children) {
         const children = el.children;
@@ -21,16 +25,37 @@ function App() {
           if(el.className === 'active') el.className = 'not';
         }
       }
-      e.target.className = 'active'
+      e.target.className = 'active';
       setSelected(e.target.name);
     }
   }
 
+  // Detects if the about button in the header was pressed
+  // If so, sets about in nav to selected
+  const aboutBtnHandler = (e) => {
+    if(e.target.className === 'button-wrapper') {
+      setSelected('about');
+      const children = document.querySelector('.nav-links').children;
+      for (const el of children) {
+        const children = el.children;
+        for(const el of children) {
+          if(el.className === 'active') el.className = 'not';
+        }
+      }
+      document.querySelector('a[name="about"]').className = 'active';
+    }
+  }
+
+  // JSX
   return (
+    // Chakra provider wrapper
     <ChakraProvider>
-      <Header/>
+      {/* Components */}
+      <Header
+      aboutBtnHandler = {aboutBtnHandler} />
       <Navigation
       navSelect = {selectedHandler} />
+      {/* Conditional rendering */}
       {selected === 'about' 
       ? <About/> 
       : selected === 'work' 
@@ -45,18 +70,5 @@ function App() {
   )
 }
 
-// To do: 
-// Increase landing page font sizes
-// make elements load on scroll
-// other components / pages
-// create new favicon
-// Contact form and resume section
-// Make app responsive 
-// https://www.youtube.com/watch?v=EAH8-V455p0
-// Make about section two parts side by side when in large view
-// Increase font sizes?
-// Make about me header button work
-// Make footer links work
-// Dropshadow on footer / nav
-
+// Export app
 export default App;

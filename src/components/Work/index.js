@@ -1,9 +1,18 @@
-import React from "react";
+// Imports
+import React, { useEffect } from "react";
 import { Text } from "@chakra-ui/react";
 import Project from "../Project";
+import animCheck from "../../scripts/anim";
 
+// Component initialization
 function Work() {
 
+  // Animation check on component load
+  useEffect(() => {
+    animCheck();
+  });
+
+  // Array containing project data
   const projectArr = [
     {
       languages: 'HTML, CSS',
@@ -61,13 +70,17 @@ function Work() {
     }
   ]
 
+  // JSX
   return (
     <section id = 'Work' className='content-format'>
-      <Text id='work-header' fontSize='6xl' fontWeight = 'bold'>Work</Text>
-      <Text color='#A0AEC0' fontSize='xl' textAlign='center' maxWidth = {{ base: 450, md: 750}} m='1rem'>This is some of the work I've done over the past 6 months i've studied to become a developer. Some may be simple {"\n"}, however they illustrate the progression of my skills through this journey.</Text>
-      <div className ='projects-container'>
+      {/* Header */}
+      <Text className='section-header ease-anim' id='work-header' fontSize='6xl' fontWeight = 'bold'>Work</Text>
+      {/* Page info */}
+      <Text className='ease-anim' color='#A0AEC0' fontSize='xl' textAlign='center' maxWidth = {{ base: 450, md: 750}} m='1rem'>This is some of the work I've done over the past 6 months i've studied to become a developer. Some may be simple {"\n"}, however they illustrate the progression of my skills through this journey.</Text>
+      {/* Projects */}
+      <div className ='ease-anim projects-container'>
         {projectArr.map((el, i) => (
-          <div key={i}>
+          <div className='ease-anim' key={i}>
             <Project
               languages = {el.languages}
               name = {el.name}
@@ -84,4 +97,5 @@ function Work() {
   )
 }
 
+// Export component
 export default Work;

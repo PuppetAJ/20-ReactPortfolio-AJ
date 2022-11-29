@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Module 20 React portfolio challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+![](https://img.shields.io/badge/License-MIT-green)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+This is Adrian Jimenez's module 20 react portfolio challenge submission. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is a simple one page portfolio using react, and other knowledge we've learned throughout the coding bootcamp courses to improve upon the original module 2 portfolio. Overall I see a major improvement in quality and spent alot of time ensuring that the page was responsive and that the animations functioned as intended.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Table of Contents
 
-### `npm test`
+- [Installation](#installation)
+- [Languages](#languages)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Contributing](#contributing)
+- [Questions](#questions)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+In order to install this project, download all files and have node.js installed on your machine. Navigate to the root directory and type: 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Once all dependencies have been downloaded, you can start the react development server by typing npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+* JavaScript
+* Node.JS
+* React
+* CSS
+* HTML
+* Chakra UI
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![](./assets/images/preview.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In order to use this project, please make sure you have node.js intalled on your machine. Once that is set up, simply execute npm start and the application should start. Alternatively, visit the site [here](https://frozen-journey-17981.herokuapp.com/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Credits
 
-## Learn More
+* Adrian Jimenez
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License. See [LICENSE.md](./LICENSE.md) for more details.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![](https://img.shields.io/badge/Contribution-CC%20v2.1-blueviolet)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project follows the contributor covenant contribution guidelines. See [here](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) 
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Questions
 
-### Deployment
+If you have any questions or concerns visit my [github](https://github.com/PuppetAJ) or send me an email at <adrianjimenez1950@gmail.com>. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

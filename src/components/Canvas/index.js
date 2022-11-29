@@ -1,37 +1,49 @@
+// Imports
 import React from 'react';
 
 function Canvas() {
 
+  // State for window dimensions (used on resize)
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
-    widht: window.innerWidth
+    width: window.innerWidth
   });
 
+  // Effect to be used on component load
   React.useEffect(() => {
     
     function handleResize() {
+      // Sets dimensions to updated window dims
       setDimensions({
         height: window.innerHeight,
         width: window.innerWidth
       })
     }
 
+    // Add resize event listener to the window
     window.addEventListener('resize', handleResize);
 
+    // Cleanup by removing existing resize listener
     return _ => {
       window.removeEventListener('resize', handleResize);
     }
 
   });
 
+  // Effect to be used on component load
   React.useEffect(() => {
+    // Credit for insp: https://codepen.io/LeonGr/pen/eYoZJB
 
+    // Select canvas el
     const canvas = document.getElementById("canvas"),
       ctx = canvas.getContext('2d');
   
-    ctx.canvas.width = window.innerWidth;
-    ctx.canvas.height = window.innerHeight;
+    // Set canvas dimensions
+    ctx.canvas.width = dimensions.width;
+    ctx.canvas.height = dimensions.height;
 
+    // Responsive canvas 
+    // Changes # of stars based on window width
     const winWidth = window.innerWidth;
     let dotCount;
     winWidth > 1600 ? dotCount = 350 :
@@ -41,6 +53,7 @@ function Canvas() {
       winWidth > 600 ? dotCount = 100 : 
       dotCount = 100;
   
+    
     const stars = [], // Array that contains the stars
       FPS = 60, // Frames per second
       dots = dotCount, // Number of stars
@@ -131,6 +144,7 @@ function Canvas() {
       }
     }
 
+    // Get canvas bounding rect to adjust mouse position when scrolling
     const rect = canvas.getBoundingClientRect();
     const moveFunc = (e) => {
       mouse.x = e.clientX - rect.left;
@@ -150,8 +164,6 @@ function Canvas() {
     
     tick();
 
-
-
     // Prevents preformance issues
     const cancelFrame = () => {
       cancelAnimationFrame(req);
@@ -167,6 +179,7 @@ function Canvas() {
   
   });
 
+  // JSX
   return (
     <canvas id='canvas'></canvas>
   )
