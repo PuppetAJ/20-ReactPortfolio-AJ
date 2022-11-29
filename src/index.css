@@ -604,6 +604,11 @@ label {
 }
 
 @media screen and (max-width: 484px) {
+
+  .icon-format {
+    width: 48px;
+    height: 48px;
+  }
   .form-button {
     width: auto;
   }
