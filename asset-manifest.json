@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/20-ReactPortfolio-AJ/static/css/main.5f2016d8.css",
-    "main.js": "/20-ReactPortfolio-AJ/static/js/main.047f888a.js",
+    "main.js": "/20-ReactPortfolio-AJ/static/js/main.f15675bd.js",
     "static/js/787.1e0f31d3.chunk.js": "/20-ReactPortfolio-AJ/static/js/787.1e0f31d3.chunk.js",
     "static/media/portfolio-original.png": "/20-ReactPortfolio-AJ/static/media/portfolio-original.c5cbe4398fc9acccb5c2.png",
     "static/media/runbuddy.png": "/20-ReactPortfolio-AJ/static/media/runbuddy.fd5adb7b56655bda8a3a.png",
+    "static/media/chunkd.png": "/20-ReactPortfolio-AJ/static/media/chunkd.3e432d6d34ce00ca7286.png",
     "static/media/grimrepo.png": "/20-ReactPortfolio-AJ/static/media/grimrepo.490b959dc1d3e86ea84c.png",
     "static/media/blog.png": "/20-ReactPortfolio-AJ/static/media/blog.d2dc1b2c72a8e10a49b2.png",
     "static/media/AdrianJResume.pdf": "/20-ReactPortfolio-AJ/static/media/AdrianJResume.0013332696ee279be4a3.pdf",
@@ -19,11 +20,11 @@
     "static/media/GitHub.svg": "/20-ReactPortfolio-AJ/static/media/GitHub.6d569ec64b0be52b0e6ee1d25cf24997.svg",
     "static/media/Eye.svg": "/20-ReactPortfolio-AJ/static/media/Eye.9a52892cad823b879ed839737ff16870.svg",
     "main.5f2016d8.css.map": "/20-ReactPortfolio-AJ/static/css/main.5f2016d8.css.map",
-    "main.047f888a.js.map": "/20-ReactPortfolio-AJ/static/js/main.047f888a.js.map",
+    "main.f15675bd.js.map": "/20-ReactPortfolio-AJ/static/js/main.f15675bd.js.map",
     "787.1e0f31d3.chunk.js.map": "/20-ReactPortfolio-AJ/static/js/787.1e0f31d3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5f2016d8.css",
-    "static/js/main.047f888a.js"
+    "static/js/main.f15675bd.js"
   ]
 }
